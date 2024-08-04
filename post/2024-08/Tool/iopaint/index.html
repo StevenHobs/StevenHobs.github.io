@@ -13,6 +13,11 @@
   
   <title>
     
+      IOPaint 人工智能修图整合 
+      
+      
+      |
+    
      梧鼠呓舍
   </title>
 
@@ -41,7 +46,7 @@
     <script defer type="text/javascript" src="/plugins/jquery.fancybox.min.js"></script>
   
   
-<script src="/js/fancybox.js"></script>
+<script src="../../../../js/fancybox.js"></script>
 
 
   
@@ -102,48 +107,172 @@
 </div>
 
 
-<script src="/js/activeNav.js"></script>
+<script src="../../../../js/activeNav.js"></script>
 
 
 
       <div class="flex-container">
-        <div class="container index">
-  <div class="post-list">
-    <!-- 遍历渲染文章 -->
-    
-      <div class="post-item" title="IOPaint 人工智能修图整合">
-        <div class="time-m-d">2024-08-04</div>
-        <div class="title">
-          <a href="post/2024-08/Tool/iopaint/">
-            
-              
-                <span>IOPaint 人工智能修图整合</span>
-              
-            
-          </a>
-        </div>
+        <!-- 文章详情页，展示文章具体内容，url形式：https://yoursite/文章标题/ -->
+<!-- 同时为「标签tag」，「朋友friend」，「分类categories」，「关于about」页面的承载页面，具体展示取决于page.type -->
+
+
+  <!-- LaTex Display -->
+
+  
+    <script async type="text/javascript" src="/plugins/mathjax/tex-chtml.js"></script>
+  
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      }
+    }
+  </script>
+
+
+
+
+
+  <!-- clipboard -->
+
+  
+    <script async type="text/javascript" src="/plugins/clipboard.min.js"></script>
+  
+  
+<script src="../../../../js/codeCopy.js"></script>
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  <!-- 文章内容页 url形式：https://yoursite/文章标题/ -->
+  <div class="container post-details" id="post-details">
+    <div class="post-content">
+      <div class="post-title">IOPaint 人工智能修图整合</div>
+      <div class="post-attach">
+        <span class="post-pubtime">
+          <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
+          2024-08-04 22:08:31
+        </span>
+        
+              <span class="post-categories">
+                <i class="iconfont icon-bookmark" title="Categories"></i>
+                
+                <span class="span--category">
+                  <a href="../../../../categories/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6/" title="工具软件">
+                    <b>#</b> 工具软件
+                  </a>
+                </span>
+                
+              </span>
+          
+              <span class="post-tags">
+                <i class="iconfont icon-tags mr-10" title="Tags"></i>
+                
+                <span class="span--tag mr-8">
+                  <a href="../../../../tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD-%E8%AE%BE%E8%AE%A1-%E7%94%B5%E5%95%86/" title="人工智能 设计 电商">
+                    #人工智能 设计 电商
+                  </a>
+                </span>
+                
+              </span>
+          
       </div>
-    
-      <div class="post-item" title="测试页">
-        <div class="time-m-d">2024-08-03</div>
-        <div class="title">
-          <a href="post/2024-08/hello-world/">
-            
-              
-                <span>测试页</span>
-              
-            
-          </a>
-        </div>
+      <div class="markdown-body">
+        <h2 id="简单介绍"><a href="#简单介绍" class="headerlink" title="简单介绍"></a>简单介绍</h2><p>iopaint 修图工具，这个软件最直接的用法就是去污点，抹除细小的东西。支持很多插件，有老照片超分辨率修复，遮罩图生成，以及Stable Diffusion AI的物体生成。</p>
+<h2 id="整合的思路"><a href="#整合的思路" class="headerlink" title="整合的思路"></a>整合的思路</h2><ol>
+<li><p>使用pyenv提取出来的python运行时，python 3.11可行；</p>
+</li>
+<li><p>先安装iopaint插件所需的依赖库，再安装 torch及iopiant；</p>
+</li>
+<li><p>使用git仓库克隆的iopaint代码时，要将web_app的前端代码编译至assets下；</p>
+</li>
+<li><p>使用环境变量 <code>XDG_CACHE_HOME</code> 来指定模型缓存路径；</p>
+</li>
+<li><p>通过bat脚本执行iopaint配置命令和iopaint工作台命令；</p>
+</li>
+</ol>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p>下载对应的整合包，安装支持7z的解压工具，这里推荐使用 <a target="_blank" rel="noopener" href="https://github.com/M2Team/NanaZip/releases/download/3.0.1000.0/NanaZip_3.0.1000.0.msixbundle">Nanazip</a> 微软应用商店可装，</p>
+<p>解压的时候注意路径位置<strong>不要包含</strong>压缩包的名字，不需要，路径直接就是 <code>D:\</code></p>
+<h2 id="随记"><a href="#随记" class="headerlink" title="随记"></a>随记</h2><p>做整合包真的很耗时间，模型得一个个下载好，整个压缩包都好几个G大小。然而自己却不怎么使用，希望之后能销售好点，也不枉我折腾了半天时间。</p>
+
       </div>
+      
+        <div class="prev-or-next">
+          <div class="post-foot-next">
+            
+              <a href="../../hello-world/" target="_self">
+                <i class="iconfont icon-chevronleft"></i>
+                <span>Prev</span>
+              </a>
+            
+          </div>
+          <div class="post-attach">
+            <span class="post-pubtime">
+              <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
+              2024-08-04 22:08:31
+            </span>
+            
+                  <span class="post-categories">
+                    <i class="iconfont icon-bookmark" title="Categories"></i>
+                    
+                    <span class="span--category">
+                      <a href="../../../../categories/%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6/" title="工具软件">
+                        <b>#</b> 工具软件
+                      </a>
+                    </span>
+                    
+                  </span>
+              
+                  <span class="post-tags">
+                    <i class="iconfont icon-tags mr-10" title="Tags"></i>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="../../../../tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD-%E8%AE%BE%E8%AE%A1-%E7%94%B5%E5%95%86/" title="人工智能 设计 电商">
+                        #人工智能 设计 电商
+                      </a>
+                    </span>
+                    
+                  </span>
+              
+          </div>
+          <div class="post-foot-prev">
+            
+          </div>
+        </div>
+      
+    </div>
+    
+  <div id="btn-catalog" class="btn-catalog">
+    <i class="iconfont icon-catalog"></i>
+  </div>
+  <div class="post-catalog hidden" id="catalog">
+    <div class="title">Contents</div>
+    <div class="catalog-content">
+      
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AE%80%E5%8D%95%E4%BB%8B%E7%BB%8D"><span class="toc-text">简单介绍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B4%E5%90%88%E7%9A%84%E6%80%9D%E8%B7%AF"><span class="toc-text">整合的思路</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8"><span class="toc-text">使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9A%8F%E8%AE%B0"><span class="toc-text">随记</span></a></li></ol>
+      
+    </div>
+  </div>
+
+  
+<script src="../../../../js/catalog.js"></script>
+
+
+
+
     
   </div>
-  <nav class="post-navigation">
-    
-    <span class="page-num">1 / 1</span>
-    
-  </nav>
-</div>
+
 
         
 <div class="footer">
@@ -196,7 +325,7 @@
 </div>
 
 
-<script src="/js/backtotop.js"></script>
+<script src="../../../../js/backtotop.js"></script>
 
 
 
@@ -401,7 +530,7 @@
   </div>
 
   
-<script src="/js/colorscheme.js"></script>
+<script src="../../../../js/colorscheme.js"></script>
 
 
 
@@ -409,8 +538,26 @@
 
         
   
+    <div class="share-icon tools-bar-item">
+      <a href="javascript: void(0)" id="share-icon">
+        <i class="iconfont iconshare"></i>
+      </a>
+      <div class="share-content hidden">
+        
+          <a class="share-item" href="https://twitter.com/intent/tweet?text=' + IOPaint%20%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E4%BF%AE%E5%9B%BE%E6%95%B4%E5%90%88 + '&url=' + https%3A%2F%2Fstevenhobs.github.io%2Fpost%2F2024-08%2FTool%2Fiopaint%2F + '" target="_blank" title="Twitter">
+            <i class="iconfont icon-twitter"></i>
+          </a>
+        
+        
+          <a class="share-item" href="https://www.facebook.com/sharer.php?u=https://stevenhobs.github.io/post/2024-08/Tool/iopaint/" target="_blank" title="Facebook">
+            <i class="iconfont icon-facebooksquare"></i>
+          </a>
+        
+      </div>
+    </div>
   
-<script src="/js/shares.js"></script>
+  
+<script src="../../../../js/shares.js"></script>
 
 
 
